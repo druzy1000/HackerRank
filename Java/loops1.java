@@ -1,17 +1,21 @@
-import java.util.Scanner;
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
 
 public class loops1 {
 
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        
-        int i = scan.nextInt();
-        Double d = scan.nextDouble();
-        scan.nextLine(); //consumes the next line making it possible to not read the remainder of the nextInt.
-        String s = scan.nextLine();
+    private static final Scanner scanner = new Scanner(System.in);
 
-        System.out.println("String: " + s);
-        System.out.println("Double: " + d);
-        System.out.println("Int: " + i);
+    public static void main(String[] args) {
+        int N = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        for(int i = 1; i>=1 && i <= 10; i++){
+            System.out.println(N + " x " + i + " = " + N*i);
+        }
+        scanner.close();
     }
 }
